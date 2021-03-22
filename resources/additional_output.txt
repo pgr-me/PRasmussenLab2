@@ -1,0 +1,24 @@
+# Peter Rasmussen, Lab 1
+# Input file: /Users/peter/PycharmProjects/PRasmussenLab1/resources/additional_input.txt
+# Output file: /Users/peter/PycharmProjects/PRasmussenLab1/resources/additional_output.txt
+
+Line 1: Prefix: Peter Rasmussen, Lab 1, Postfix: PrefixSyntaxError('Prefix statement cannot begin with an operand character')
+Line 2: Prefix: +-*$ABCDE, Postfix: AB$C*D-E+
+Line 3: Prefix:  +A$/+*-BC-DEFG-HJ , Postfix: ABC-DE-*F+G/HJ-$+
+Line 4: Prefix: -*+AB+$C-DEFG, Postfix: AB+CDE-$F+*G-
+Line 5: Prefix: 	 $A, Postfix: PrefixSyntaxError('Column 5: Too many operators, 1, for operand characters, 1.')
+Line 6: Prefix: ****, Postfix: PrefixSyntaxError('Column 5: Too many operators, 4, for operand characters, 0.')
+Line 7: Prefix: ABCDEF	   , Postfix: PrefixSyntaxError('Prefix statement cannot begin with an operand character')
+Line 8: Prefix:   	$AB 	, Postfix: AB$
+Line 9: Prefix: *13, Postfix: PrefixSyntaxError('Illegal character `1` encountered in column 2')
+Line 10: Prefix: +*$ZBC+19, Postfix: PrefixSyntaxError('Illegal character `1` encountered in column 8')
+Line 11: Prefix:   , Postfix: Nothing to process
+Line 12: Prefix: , Postfix: Nothing to process
+Line 13: Prefix: , Postfix: Nothing to process
+Line 14: Prefix: +$, Postfix: PrefixSyntaxError('Column 3: Too many operators, 2, for operand characters, 0.')
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Complexity outputs
+Function: convert_prefix_input	Time (ns): 3725000	Loops: 15
+Function: convert_prefix_stack	Time (ns): 1424000	Loops: 16
+Function: _convert_prefix_stack	Time (ns): 1421000	Loops: 15

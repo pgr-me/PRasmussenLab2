@@ -1,0 +1,21 @@
+# Peter Rasmussen, Lab 1
+# Input file: /Users/peter/PycharmProjects/PRasmussenLab1/resources/additional_input_10.txt
+# Output file: /Users/peter/PycharmProjects/PRasmussenLab1/resources/additional_output_10.txt
+# Numerals included: Please note numerals are only valid for single digit integers (0 to 9)
+
+Line 1: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 2: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 3: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 4: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 5: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 6: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 7: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 8: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 9: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 10: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Complexity outputs
+Function: convert_prefix_input	Time (ns): 10684000	Loops: 11
+Function: convert_prefix_stack	Time (ns): 8161000	Loops: 90
+Function: _convert_prefix_stack	Time (ns): 7167000	Loops: 81

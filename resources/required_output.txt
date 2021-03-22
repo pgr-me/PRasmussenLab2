@@ -1,0 +1,29 @@
+# Peter Rasmussen, Lab 1
+# Input file: /Users/peter/PycharmProjects/PRasmussenLab1/resources/required_input.txt
+# Output file: /Users/peter/PycharmProjects/PRasmussenLab1/resources/required_output.txt
+
+Line 1: Prefix: -+ABC, Postfix: AB+C-
+Line 2: Prefix: -A+BC, Postfix: ABC+-
+Line 3: Prefix: $+-ABC+D-EF, Postfix: AB-C+DEF-+$
+Line 4: Prefix: -*A$B+C-DE*EF, Postfix: ABCDE-+$*EF*-
+Line 5: Prefix: **A+BC+C-BA, Postfix: ABC+*CBA-+*
+Line 6: Prefix: /A+BC +C*BA  , Postfix: PrefixSyntaxError('Column 11: Too few operators, 4, for operand characters, 6.')
+Line 7: Prefix: *-*-ABC+BA  , Postfix: PrefixSyntaxError('Column 13: Too many operators, 5, for operand characters, 5.')
+Line 8: Prefix: /+/A-BC-BA  , Postfix: PrefixSyntaxError('Column 13: Too many operators, 5, for operand characters, 5.')
+Line 9: Prefix: *$A+BC+C-BA , Postfix: ABC+$CBA-+*
+Line 10: Prefix: //A+B0-C+BA, Postfix: PrefixSyntaxError('Illegal character `0` encountered in column 6')
+Line 11: Prefix: *$A^BC+C-BA					, Postfix: PrefixSyntaxError('Illegal character `^` encountered in column 4')
+Line 12: Prefix: 						, Postfix: Nothing to process
+Line 13: Prefix: 				, Postfix: Nothing to process
+Line 14: Prefix: 					, Postfix: Nothing to process
+Line 15: Prefix: 					, Postfix: Nothing to process
+Line 16: Prefix: 	, Postfix: Nothing to process
+Line 17: Prefix: , Postfix: Nothing to process
+Line 18: Prefix: , Postfix: Nothing to process
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Complexity outputs
+Function: convert_prefix_input	Time (ns): 3216000	Loops: 19
+Function: convert_prefix_stack	Time (ns): 964000	Loops: 18
+Function: _convert_prefix_stack	Time (ns): 836000	Loops: 15

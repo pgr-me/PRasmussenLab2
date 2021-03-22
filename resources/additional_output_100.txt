@@ -1,0 +1,110 @@
+# Peter Rasmussen, Lab 1
+# Input file: /Users/peter/PycharmProjects/PRasmussenLab1/resources/additional_input_100.txt
+# Output file: /Users/peter/PycharmProjects/PRasmussenLab1/resources/additional_output_100.txt
+
+Line 1: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 2: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 3: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 4: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 5: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 6: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 7: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 8: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 9: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 10: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 11: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 12: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 13: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 14: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 15: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 16: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 17: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 18: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 19: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 20: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 21: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 22: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 23: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 24: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 25: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 26: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 27: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 28: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 29: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 30: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 31: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 32: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 33: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 34: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 35: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 36: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 37: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 38: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 39: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 40: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 41: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 42: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 43: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 44: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 45: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 46: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 47: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 48: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 49: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 50: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 51: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 52: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 53: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 54: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 55: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 56: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 57: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 58: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 59: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 60: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 61: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 62: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 63: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 64: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 65: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 66: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 67: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 68: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 69: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 70: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 71: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 72: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 73: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 74: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 75: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 76: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 77: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 78: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 79: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 80: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 81: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 82: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 83: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 84: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 85: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 86: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 87: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 88: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 89: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 90: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 91: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 92: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 93: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 94: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 95: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 96: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 97: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 98: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 99: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 100: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Complexity outputs
+Function: convert_prefix_input	Time (ns): 97276000	Loops: 101
+Function: convert_prefix_stack	Time (ns): 74599000	Loops: 900
+Function: _convert_prefix_stack	Time (ns): 73921000	Loops: 891
