@@ -1,4 +1,4 @@
-"""Peter Rasmussen, Lab 1, prefix_converter.py
+"""Peter Rasmussen, Lab 2, prefix_converter.py
 
 This module provides the PrefixConverter and PrefixSyntaxError classes. The PrefixConverter class
 converts a file of newline-delimited prefix expressions, when possible, into their postfix
@@ -36,7 +36,7 @@ from time import time_ns
 from typing import Union
 
 # local imports
-from lab1.stack import Stack
+from lab2.stack import Stack
 
 
 class PrefixSyntaxError(Exception):

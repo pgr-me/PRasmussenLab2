@@ -1,4 +1,4 @@
-Peter Rasmussen, Lab 1
+Peter Rasmussen, Lab 2
 +-*$ABCDE
  +A$/+*-BC-DEFG-HJ 
 -*+AB+$C-DEFG

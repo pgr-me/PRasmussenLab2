@@ -1,4 +1,4 @@
-"""Peter Rasmussen, Lab 1, stack.py
+"""Peter Rasmussen, Lab 2, stack.py
 
 
 This module provides Stack, StackUnderflowError, and StackOverflowError classes. The Stack class is

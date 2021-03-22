@@ -1,4 +1,4 @@
-"""Peter Rasmussen, Lab 1, stack.py
+"""Peter Rasmussen, Lab 2, stack.py
 
 This program converts a file of newline-delimited prefix expressions into an output of postfix
 expressions. Each line of the output begins with the line number of the prefix expression from the
@@ -16,11 +16,11 @@ user may specify a file header that is prepended to the outputs. Please refer to
 statements for more information on these optional arguments.
 
 Example execution:
-    python -m path/to/lab1 -i path/to/input_file.txt -o path/to/output_file.txt
+    python -m path/to/lab2 -i path/to/input_file.txt -o path/to/output_file.txt
 
 The structure of this package is based on the Python lab0 package that Scott Almes developed for
 this course. Per Scott Almes, this module "is the entry point into this program when the module is
-executed as a standalone program. IE 'python -m lab1'."
+executed as a standalone program. IE 'python -m lab2'."
 
 """
 
@@ -28,7 +28,7 @@ executed as a standalone program. IE 'python -m lab1'."
 from pathlib import Path
 import argparse
 
-from lab1.prefix_converter import PrefixConverter
+from lab2.prefix_converter import PrefixConverter
 
 # Parse arguments
 arg_parser = argparse.ArgumentParser()

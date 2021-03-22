@@ -1,4 +1,4 @@
-# Peter Rasmussen, Lab 1
+# Peter Rasmussen, Lab 2
 # Input file: /Users/peter/PycharmProjects/PRasmussenLab1/resources/required_input.txt
 # Output file: /Users/peter/PycharmProjects/PRasmussenLab1/resources/required_output.txt
 

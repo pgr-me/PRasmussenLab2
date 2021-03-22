@@ -1,4 +1,4 @@
-# Peter Rasmussen, Lab 1
+# Peter Rasmussen, Lab 2
 
 This Python package converts prefix statements into their postfix equivalents using stacks as the
 underlying data structure.
@@ -9,7 +9,7 @@ The package is designed to be executed as a module from the command line. The us
 input and output file paths, as illustrated below.
 
 ```shell
-python -m path/to/lab1 -i path/to/input_file.txt -o path/to/output_file.txt
+python -m path/to/lab2 -i path/to/input_file.txt -o path/to/output_file.txt
 ```
 
 Optionally, the user may specify whether to include numerals as acceptable operand symbols. **Please
@@ -18,7 +18,7 @@ user may specify a file header that is prepended to the outputs. The example bel
 of the optional arguments.
 
 ```shell
-python -m path/to/lab1 -i path/to/in_file.txt -o path/to/out_file.txt -n True -f "Your Header"
+python -m path/to/lab2 -i path/to/in_file.txt -o path/to/out_file.txt -n True -f "Your Header"
 ```
 
 A summary of the command line arguments are below.
@@ -52,7 +52,7 @@ follows this naming convention.
 
 An example of the output for a three-line input is shown below.
 
-    # Peter Rasmussen, Lab 1
+    # Peter Rasmussen, Lab 2
     # Input file: /path/to/required_input.txt
     # Output file: /path/to/required_output.txt
 
