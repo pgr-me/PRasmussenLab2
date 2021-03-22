@@ -166,3 +166,14 @@ class PrefixSyntaxChecker:
         :return: True if no previous error encountered.
         """
         return self.error == ''
+
+    @staticmethod
+    def is_empty(operands: int, operators: int) -> bool:
+        """
+        Determine whether string contains any operands or operators.
+        The string is "empty" if it only contains spaces and tabs.
+        :param operands: Number of operands in the string
+        :param operators: Number of operators in the string
+        :return: True if string contains zero operands and operators
+        """
+        return operands + operators == 0
