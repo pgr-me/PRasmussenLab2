@@ -27,7 +27,11 @@ executed as a standalone program. IE 'python -m lab2'."
 # Generally used to process command line arguments and 'launch' the program
 from pathlib import Path
 import argparse
+from typing import Union
 
+# local imports
+from lab2.symbols import Symbols
+from lab2.prefix_preprocessor import PrefixPreProcessor
 from lab2.prefix_converter import PrefixConverter
 
 # Parse arguments
@@ -37,7 +41,7 @@ arg_parser.add_argument("--out_file", "-o", type=Path, help="Output File Pathnam
 arg_parser.add_argument(
     "--file_header",
     "-f",
-    default="Peter Rasmussen, Lab 1",
+    default="Peter Rasmussen, Lab 2",
     type=str,
     help="Include numerals as accepted operands",
 )
@@ -48,15 +52,53 @@ arg_parser.add_argument(
     type=bool,
     help="Include numerals as accepted operands",
 )
+arg_parser.add_argument(
+    "--additional_operators",
+    "-a",
+    default=None,
+    type=Union[None, str],
+    help="Include additional operators",
+)
 args = arg_parser.parse_args()
 
 # Declare in_path, out_path, use_numerals, and file_header variables
 in_path = Path(args.in_file)
 out_path = Path(args.out_file)
 use_numerals = args.use_numerals
+additional_operators = args.additional_operators
 file_header = args.file_header
 
+# Instantiate symbols object, which contains operands, operators, and other accepted characters
+symbols = Symbols(use_numerals=use_numerals, additional_operators=additional_operators)
+
+# Preprocess prefix file, checking for errors and recording complexity metrics
+prefix_preprocessor = PrefixPreProcessor(
+    in_path,
+    symbols.operands,
+    symbols.operators,
+    symbols.other_symbols,
+    symbols.accepted_symbols,
+)
+file_di: dict = prefix_preprocessor.preprocess_prefix_input()
+for line_di in file_di["prefix_data"]:
+    prefix = line_di["prefix_string"]
+    line = line_di["line"]
+    if line_di["valid_prefix"]:
+        postfix = PrefixConverter(
+            line_di["prefix_string"],
+            symbols.operands,
+            symbols.operators,
+            symbols.other_symbols,
+        )
+    elif line_di["error"] != "":
+        postfix = line_di["error"]
+    else:
+        postfix = "Nothing to process"
+    output = f"Line: {line}: Prefix {prefix}, Postfix: {postfix}"
+
+
 # Instantiate prefix converter object and convert file of prefix strings to postfix equivalents
-prefix_converter = PrefixConverter(in_path, out_path, use_numerals, file_header)
+
+
 prefix_converter.convert_prefix_input()
 prefix_converter.write_output()

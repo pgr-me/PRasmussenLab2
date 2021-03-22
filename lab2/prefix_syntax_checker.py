@@ -1,4 +1,4 @@
-"""Peter Rasmussen, Lab 2, prefix_processor.py
+"""Peter Rasmussen, Lab 2, prefix_preprocessor.py
 
 This module provides the PrefixConverter and PrefixSyntaxError classes. The PrefixConverter class
 converts a file of newline-delimited prefix expressions, when possible, into their postfix
@@ -57,8 +57,10 @@ class PrefixSyntaxChecker:
         self.operand_symbols = operand_symbols
         self.operator_symbols = operator_symbols
         self.other_symbols = other_symbols
-        self.accepted_symbols = self.operand_symbols + self.operator_symbols + self.other_symbols
-        self.error = ''
+        self.accepted_symbols = (
+            self.operand_symbols + self.operator_symbols + self.other_symbols
+        )
+        self.error = ""
 
     def check_syntax(self, character: str, column: int):
         """Check for leading operand, if symbol is legal, and operand & operator counts.
@@ -77,7 +79,9 @@ class PrefixSyntaxChecker:
         """
         try:
             if self.no_prior_error() and self.is_operand(character) and (column == 1):
-                error_message = "Prefix statement cannot begin with an operand character"
+                error_message = (
+                    "Prefix statement cannot begin with an operand character"
+                )
                 raise PrefixSyntaxError(error_message)
         except PrefixSyntaxError as e:
             self.error = e.__repr__()
@@ -90,7 +94,9 @@ class PrefixSyntaxChecker:
         """
         try:
             if self.no_prior_error() and not self.is_accepted_symbol(character):
-                error_message = f"Illegal character `{character}` found in column {column}"
+                error_message = (
+                    f"Illegal character `{character}` found in column {column}"
+                )
                 raise PrefixSyntaxError(error_message)
         except PrefixSyntaxError as e:
             self.error = e.__repr__()
@@ -120,9 +126,11 @@ class PrefixSyntaxChecker:
 
         try:
             if not condition:
-                few_many = 'many'
-                if (final and operators < operands - 1) or (not final and operators < operands):
-                    few_many = 'few'
+                few_many = "many"
+                if (final and operators < operands - 1) or (
+                    not final and operators < operands
+                ):
+                    few_many = "few"
                 error_message = f"Column {column}: Too {few_many} operators, {operators}, for operand characters, {operands}."
                 raise PrefixSyntaxError(error_message)
         except PrefixSyntaxError as e:
@@ -134,7 +142,9 @@ class PrefixSyntaxChecker:
         :param symbol: Symbol to evaluate
         :return: True if symbol is accepted
         """
-        return self.is_operand(symbol) | self.is_operator(symbol) | self.is_other(symbol)
+        return (
+            self.is_operand(symbol) | self.is_operator(symbol) | self.is_other(symbol)
+        )
 
     def is_operand(self, symbol: str) -> bool:
         """
@@ -165,7 +175,7 @@ class PrefixSyntaxChecker:
         :param: None
         :return: True if no previous error encountered.
         """
-        return self.error == ''
+        return self.error == ""
 
     @staticmethod
     def is_empty(operands: int, operators: int) -> bool:

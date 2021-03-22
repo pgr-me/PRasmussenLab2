@@ -1,7 +1,7 @@
-"""Peter Rasmussen, Lab 2, prefix_processor.py
+"""Peter Rasmussen, Lab 2, prefix_preprocessor.py
 
-This module provides the PrefixProcessor class, which reads a file of prefix statements character
-by character and checks each prefix statement for errors. PrefixProcessor returns a list of
+This module provides the PrefixPreProcessor class, which reads a file of prefix statements character
+by character and checks each prefix statement for errors. PrefixPreProcessor returns a list of
 dictionaries. Each dictionary corresponds to one line in the input file and contains prefix
 statements, errors (if any), and complexity metrics.
 
@@ -16,7 +16,7 @@ from typing import Union
 from lab2.prefix_syntax_checker import PrefixSyntaxChecker
 
 
-class PrefixProcessor:
+class PrefixPreProcessor:
     """
     This class converts prefix expressions into postfix equivalents.
     Methods are organized top-down: highest-level methods come first, static methods come last.
@@ -44,9 +44,10 @@ class PrefixProcessor:
         self.file_di = {'start': time_ns(), 'stop': None, 'symbols': 0, 'lines': 0,
                         'prefix_data': []}
 
-    def convert_prefix_input(self) -> dict:
+    def preprocess_prefix_input(self) -> dict:
         """
         Convert prefix input from file, echoing inputs and postfix conversions to output file.
+        This method runs prior to
         :return: Echoed prefix with corresponding postfix equivalents; summary stats at file bottom
         """
 
@@ -71,8 +72,13 @@ class PrefixProcessor:
                     line_di['is_empty'] = prefix_syntax_checker.is_empty(line_di['operands'],
                                                                          line_di['operators'])
                     line_di['error'] = prefix_syntax_checker.error
+                    if prefix_syntax_checker.no_prior_error() and not line_di['is_empty']:
+                        line_di['valid_prefix'] = True
+                    else:
+                        line_di['valid_prefix'] = False
                     line_di['stop'] = time_ns()
                     line_di['elapsed'] = line_di['stop'] - line_di['start']
+
                     self.file_di['prefix_data'].append(line_di)
 
                     # Re-initialize symbol and line dict
