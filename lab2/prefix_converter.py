@@ -47,23 +47,36 @@ class PrefixConverter:
 
     def __init__(
         self,
-        prefix_string: str,
         operand_symbols: str,
         operator_symbols: str,
-    ) -> None:
+    ):
         """
         Initialize IO attributes and output file header and define symbol set
         :param prefix_string: Prefix string to convert
         :param operand_symbols: Operand symbols (e.g., a, b, C, D, etc.)
         :param operator_symbols: Operator symbols (e.g., +, -, *, /, $, etc.)
         """
-        self.prefix_string = prefix_string
         self.operand_symbols = operand_symbols
         self.operator_symbols = operator_symbols
         self.other_symbols = '\n \t'
 
-    def convert_prefix(self) -> str:
-        return self.prefix_string
+    def convert_prefix_to_postfix(self, prefix: list) -> list:
+        """
+        Convert an array of prefix characters to an array of postfix characters.
+        :param prefix: List of prefix symbols
+        :return: List of postfix symbols
+        """
+        postfix = []
+        while len(prefix) > 0:
+            if prefix[0] in '+-*/$' and len(postfix) == 0:
+                postfix.append(prefix.pop(0))
+            elif prefix[0] in '+-*/$':
+                postfix += self.convert_prefix_to_postfix(prefix)
+            else:
+                postfix.append(prefix.pop(0))
+        op_term = postfix[1] + postfix[2] + postfix[0]
+        postfix = [op_term] + postfix[3:]
+        return postfix
 
 
 #    def convert_prefix_input(self) -> str:

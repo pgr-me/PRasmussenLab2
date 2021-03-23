@@ -45,7 +45,6 @@ class PrefixPreProcessor:
     def preprocess_prefix_input(self) -> dict:
         """
         Convert prefix input from file, echoing inputs and postfix conversions to output file.
-        This method runs prior to
         :return: Echoed prefix with corresponding postfix equivalents; summary stats at file bottom
         """
 
@@ -56,14 +55,11 @@ class PrefixPreProcessor:
             # Specifically, lines 119 through 122
             # The while loop iterates at the character level
             # Initialize symbol and line dict
-            line_di = {'start': time_ns(), 'stop': None, 'elapsed': None, 'prefix': '',
-                       'n_operands': 0, 'n_operators': 0, 'line': line, 'column': 0,
-                       'is_empty': None, 'error': ''}
-            symbol = 'a'  # Dummy symbol to let us initialize while loop
+            line_di = self.make_line_di(line)
             prefix_syntax_checker = PrefixSyntaxChecker(self.operands,
                                                         self.operators)
             while True:
-                # Read each character and push to prefix stack
+                # Read and preprocess each character
                 symbol = f.read(1)
 
                 # If we reach the end of the line, populate file_di and re-initialize line_di
@@ -88,14 +84,12 @@ class PrefixPreProcessor:
 
                     # Increment line number, re-initialize line dict, and reset error
                     line += 1
-                    line_di = {'start': time_ns(), 'stop': None, 'prefix': '',
-                               'n_operands': 0, 'n_operators': 0, 'line': line, 'column': 0,
-                               'error': ''}
+                    line_di = self.make_line_di(line)
                     prefix_syntax_checker.error = ""
 
                 else:
                     line_di['column'] += 1  # Increment column count
-                    line_di['prefix'] += symbol  # Add character to echoed prefix string
+                    line_di['prefix'].append(symbol)  # Add character to echoed prefix string
                     line_di['n_operands'] += prefix_syntax_checker.is_operand(symbol)
                     line_di['n_operators'] += prefix_syntax_checker.is_operator(symbol)
 
@@ -112,3 +106,13 @@ class PrefixPreProcessor:
             self.file_di['stop'] = time_ns()
             self.file_di['elapsed'] = self.file_di['stop'] - self.file_di['start']
             return self.file_di
+
+    @staticmethod
+    def make_line_di(line) -> dict:
+        """
+        Make a dictionary that line that contains complexity metrics, line number, prefix, and, if
+        applicable, and error encountered during syntax checking.
+        :return: Line-level dictionary of preprocessed prefix outputs
+        """
+        return {'start': time_ns(), 'stop': None, 'elapsed': None, 'prefix': [], 'n_operands': 0,
+                'n_operators': 0, 'line': line, 'column': 0, 'is_empty': None, 'error': ''}
