@@ -36,7 +36,7 @@ from time import time_ns
 from typing import Union
 
 # local imports
-from lab2.prefix_preprocessor import PrefixPreProcessor
+from lab2.prefix_preprocessor import PrefixPreprocessor
 
 
 class PrefixConverter:

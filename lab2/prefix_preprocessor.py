@@ -16,7 +16,7 @@ from typing import Union
 from lab2.prefix_syntax_checker import PrefixSyntaxChecker
 
 
-class PrefixPreProcessor:
+class PrefixPreprocessor:
     """
     This class converts prefix expressions into postfix equivalents.
     Methods are organized top-down: highest-level methods come first, static methods come last.
@@ -27,7 +27,7 @@ class PrefixPreProcessor:
             input_file: Union[str, Path],
             operands: str,
             operators: str
-    ) -> None:
+    ):
         """
         Initialize IO attributes and output file header and define symbol set
         :param input_file: Input file to read

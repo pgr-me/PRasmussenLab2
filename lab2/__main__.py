@@ -32,21 +32,8 @@ from pathlib import Path
 from typing import Union
 
 # local imports
-from lab2.symbols import Symbols
-from lab2.prefix_preprocessor import PrefixPreProcessor
-from lab2.prefix_converter import PrefixConverter
+from lab2.run import run
 
-
-def array_to_string(a: list)->str:
-    """
-    Convert an array to a string:
-    :param a: List of elements
-    :return: String of concatenated elements
-    """
-    s = ''
-    for i in a:
-        s += i
-    return s
 
 # Parse arguments
 arg_parser = argparse.ArgumentParser()
@@ -77,30 +64,7 @@ file_header = (
     f"# Output file: {out_path.absolute()}\n"
     "\n"
 )
+file_footer = "Stuff"
 
-# Instantiate symbols object, which contains operands, operators, and other accepted characters
-symbols = Symbols(use_numerals=use_numerals, additional_operators=additional_operators)
-# Preprocess prefix file, checking for errors and recording complexity metrics
-prefix_preprocessor = PrefixPreProcessor(in_path, symbols.operands, symbols.operators)
-file_di: dict = prefix_preprocessor.preprocess_prefix_input()
-prefix_converter = PrefixConverter(symbols.operands, symbols.operators)
-with open(str(out_path), 'w') as f:
-    f.write(file_header)
-    f.write(f"# {98 * '@'}" + os.linesep)
-    f.write("# Prefix-postfix conversion" + os.linesep)
-    for line_di in file_di["prefix_data"]:
-        prefix: list = line_di["prefix"]
-        line: int = line_di["line"]
-        f.write(f"Line {line}: Prefix: {array_to_string(prefix)}, ")
-        if line_di["valid_prefix"]:
-            prefix_converter = PrefixConverter(symbols.operands, symbols.operators)
-            postfix = prefix_converter.convert_prefix_to_postfix(prefix)
-        elif line_di["error"] != "":
-            postfix = line_di["error"]
-        else:
-            postfix = "Nothing to process"
-        output = f"Postfix: {array_to_string(postfix)}"
-        f.write(output + os.linesep)
-    f.write(os.linesep + f"# {98 * '@'}" + os.linesep)
-    f.write("Complexity outputs" + os.linesep)
-    f.write("Stuff")
+# Execute prefix-to-postfix conversion run function
+run(in_path, out_path, file_header, use_numerals, additional_operators)
