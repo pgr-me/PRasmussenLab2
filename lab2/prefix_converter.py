@@ -50,20 +50,17 @@ class PrefixConverter:
         prefix_string: str,
         operand_symbols: str,
         operator_symbols: str,
-        other_symbols: str,
     ) -> None:
         """
         Initialize IO attributes and output file header and define symbol set
         :param prefix_string: Prefix string to convert
         :param operand_symbols: Operand symbols (e.g., a, b, C, D, etc.)
         :param operator_symbols: Operator symbols (e.g., +, -, *, /, $, etc.)
-        :param other_symbols: Non-illegal symbols including newline, tab, and space
-        :param error: Error message from prefix_syntax checker
         """
         self.prefix_string = prefix_string
         self.operand_symbols = operand_symbols
         self.operator_symbols = operator_symbols
-        self.other_symbols = other_symbols
+        self.other_symbols = '\n \t'
 
     def convert_prefix(self) -> str:
         return self.prefix_string

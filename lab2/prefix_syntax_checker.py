@@ -30,14 +30,6 @@ message encapsulated in PrefixSyntaxError object is written to in lieu of a post
 
 """
 
-# standard library imports
-from pathlib import Path
-from time import time_ns
-from typing import Union
-
-# local imports
-from lab2.stack import Stack
-
 
 class PrefixSyntaxError(Exception):
     """Exception to capture prefix syntax errors."""
@@ -53,10 +45,10 @@ class PrefixSyntaxChecker:
     For readability, we only capture the first error in a prefix term.
     """
 
-    def __init__(self, operand_symbols, operator_symbols, other_symbols):
+    def __init__(self, operand_symbols, operator_symbols):
         self.operand_symbols = operand_symbols
         self.operator_symbols = operator_symbols
-        self.other_symbols = other_symbols
+        self.other_symbols = '\n \t'
         self.accepted_symbols = (
             self.operand_symbols + self.operator_symbols + self.other_symbols
         )
