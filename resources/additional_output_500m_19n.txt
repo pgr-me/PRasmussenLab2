@@ -1,7 +1,10 @@
-# Peter Rasmussen, Lab 1
-# Input file: /Users/peter/PycharmProjects/PRasmussenLab1/resources/additional_input_500.txt
-# Output file: /Users/peter/PycharmProjects/PRasmussenLab1/resources/additional_output_500.txt
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# Peter Rasmussen, Lab 2
+# Input file: /Users/peter/PycharmProjects/PRasmussenLab2/resources/additional_input_500m_19n.txt
+# Output file: /Users/peter/PycharmProjects/PRasmussenLab2/resources/additional_output_500m_19n.txt
 
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# Prefix-postfix conversion
 Line 1: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
 Line 2: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
 Line 3: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
@@ -503,8 +506,16 @@ Line 498: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
 Line 499: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
 Line 500: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 Complexity outputs
-Function: convert_prefix_input	Time (ns): 509880000	Loops: 501
-Function: convert_prefix_stack	Time (ns): 393537000	Loops: 4500
-Function: _convert_prefix_stack	Time (ns): 392923000	Loops: 4491
+run
+	lines: 501
+	elapsed_ns: 96335000
+	lines_per_ns: 5.200602065708206e-06
+prefix_processor
+	elapsed_ns: 66594000
+	lines_per_ns: 7.523200288314262e-06
+prefix_converter
+	elapsed_ns: 13707000
+	lines_per_ns: 3.6550667542131754e-05
+	n_recursive_calls: 4000

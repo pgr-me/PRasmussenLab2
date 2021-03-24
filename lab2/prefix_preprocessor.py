@@ -105,6 +105,7 @@ class PrefixPreprocessor:
             # After reaching end of file, compute total time complexity and return the file_di
             self.file_di['stop'] = time_ns()
             self.file_di['elapsed'] = self.file_di['stop'] - self.file_di['start']
+            self.file_di['lines'] = line
             return self.file_di
 
     @staticmethod

@@ -27,7 +27,6 @@ executed as a standalone program. IE 'python -m lab2'."
 
 # standard library imports
 import argparse
-import os
 from pathlib import Path
 from typing import Union
 
@@ -52,19 +51,5 @@ arg_parser.add_argument(
 )
 args = arg_parser.parse_args()
 
-# Declare in_path, out_path, use_numerals, and file_header variables
-in_path = Path(args.in_file)
-out_path = Path(args.out_file)
-use_numerals = args.use_numerals
-additional_operators = args.additional_operators
-file_header = (
-    f"# {98 * '@'}\n"
-    f"# {args.file_header}\n"
-    f"# Input file: {in_path.absolute()}\n"
-    f"# Output file: {out_path.absolute()}\n"
-    "\n"
-)
-file_footer = "Stuff"
-
 # Execute prefix-to-postfix conversion run function
-run(in_path, out_path, file_header, use_numerals, additional_operators)
+run(args.in_file, args.out_file, args.file_header, args.use_numerals, args.additional_operators)

@@ -1,18 +1,21 @@
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # Peter Rasmussen, Lab 2
-# Input file: /Users/peter/PycharmProjects/PRasmussenLab1/resources/required_input.txt
-# Output file: /Users/peter/PycharmProjects/PRasmussenLab1/resources/required_output.txt
+# Input file: /Users/peter/PycharmProjects/PRasmussenLab2/resources/required_input.txt
+# Output file: /Users/peter/PycharmProjects/PRasmussenLab2/resources/required_output.txt
 
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# Prefix-postfix conversion
 Line 1: Prefix: -+ABC, Postfix: AB+C-
 Line 2: Prefix: -A+BC, Postfix: ABC+-
 Line 3: Prefix: $+-ABC+D-EF, Postfix: AB-C+DEF-+$
 Line 4: Prefix: -*A$B+C-DE*EF, Postfix: ABCDE-+$*EF*-
 Line 5: Prefix: **A+BC+C-BA, Postfix: ABC+*CBA-+*
 Line 6: Prefix: /A+BC +C*BA  , Postfix: PrefixSyntaxError('Column 11: Too few operators, 4, for operand characters, 6.')
-Line 7: Prefix: *-*-ABC+BA  , Postfix: PrefixSyntaxError('Column 13: Too many operators, 5, for operand characters, 5.')
-Line 8: Prefix: /+/A-BC-BA  , Postfix: PrefixSyntaxError('Column 13: Too many operators, 5, for operand characters, 5.')
-Line 9: Prefix: *$A+BC+C-BA , Postfix: ABC+$CBA-+*
-Line 10: Prefix: //A+B0-C+BA, Postfix: PrefixSyntaxError('Illegal character `0` encountered in column 6')
-Line 11: Prefix: *$A^BC+C-BA					, Postfix: PrefixSyntaxError('Illegal character `^` encountered in column 4')
+Line 7: Prefix: *-*-ABC+BA  , Postfix: PrefixSyntaxError('Column 12: Too many operators, 5, for operand characters, 5.')
+Line 8: Prefix: /+/A-BC-BA  , Postfix: PrefixSyntaxError('Column 12: Too many operators, 5, for operand characters, 5.')
+Line 9: Prefix: *$A+BC+C-BA , Postfix: ABC+$CBA-+* 
+Line 10: Prefix: //A+B0-C+BA, Postfix: PrefixSyntaxError('Illegal character `0` found in column 6')
+Line 11: Prefix: *$A^BC+C-BA					, Postfix: PrefixSyntaxError('Illegal character `^` found in column 4')
 Line 12: Prefix: 						, Postfix: Nothing to process
 Line 13: Prefix: 				, Postfix: Nothing to process
 Line 14: Prefix: 					, Postfix: Nothing to process
@@ -21,9 +24,16 @@ Line 16: Prefix: 	, Postfix: Nothing to process
 Line 17: Prefix: , Postfix: Nothing to process
 Line 18: Prefix: , Postfix: Nothing to process
 
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 Complexity outputs
-Function: convert_prefix_input	Time (ns): 3216000	Loops: 19
-Function: convert_prefix_stack	Time (ns): 964000	Loops: 18
-Function: _convert_prefix_stack	Time (ns): 836000	Loops: 15
+run
+	lines: 19
+	elapsed_ns: 6385000
+	lines_per_ns: 2.975724353954581e-06
+prefix_processor
+	elapsed_ns: 2327000
+	lines_per_ns: 8.165019338203696e-06
+prefix_converter
+	elapsed_ns: 141000
+	lines_per_ns: 0.00013475177304964539
+	n_recursive_calls: 19
