@@ -1,7 +1,6 @@
 # Peter Rasmussen, Lab 2
 
-This Python package converts prefix statements into their postfix equivalents using stacks as the
-underlying data structure.
+This Python package recursively converts prefix statements into their postfix equivalents. 
 
 ## Getting Started
 
@@ -15,10 +14,10 @@ python -m path/to/lab2 -i path/to/input_file.txt -o path/to/output_file.txt
 Optionally, the user may specify whether to include numerals as acceptable operand symbols. **Please
 note that only single-digit numerals (0-9) are supported in this implementation**. Additionally, the
 user may specify a file header that is prepended to the outputs. The example below illustrates usage
-of the optional arguments.
+of the optional arguments. Finally, the user may add additional operators (e.g., %) if desired.
 
 ```shell
-python -m path/to/lab2 -i path/to/in_file.txt -o path/to/out_file.txt -n True -f "Your Header"
+python -m path/to/lab2 -i path/to/in_file.txt -o path/to/out_file.txt -n True -f "Your Header" -a %^
 ```
 
 A summary of the command line arguments are below.
@@ -30,15 +29,16 @@ Positional arguments:
 
 Optional arguments:
 
-    -h, --help          Show this help message and exit
-    -f, --file_header   Input custom file header above output file
-    -n, --use_numerals  Include numerals 0-9 among accepted operands
+    -h, --help                  Show this help message and exit
+    -f, --file_header           Input custom file header above output file
+    -n, --use_numerals          Include numerals 0-9 among accepted operands
+    -a, --additional_operators  Include numerals 0-9 among accepted operands
 
 ## Features
 
 * Array-based stack that uses a pre-allocated array size
 * Error handling to invalid prefix expressions, type errors, and value errors
-* Options to parse single-digit numerals and write custom output file header
+* Options to parse single-digit numerals, use additional operators, & write custom output file header
 * Time and space complexity statistics appended to end of output file
 
 ## Input and Output Files
@@ -50,27 +50,47 @@ follows this naming convention.
 
 ## Example Output File
 
-An example of the output for a three-line input is shown below.
+An example of the output is shown below.
 
+    # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     # Peter Rasmussen, Lab 2
-    # Input file: /path/to/required_input.txt
-    # Output file: /path/to/required_output.txt
+    # Input file: /Users/peter/PycharmProjects/PRasmussenLab2/resources/additional_input.txt
+    # Output file: /Users/peter/PycharmProjects/PRasmussenLab2/resources/additional_output.txt
 
-    Line 1: Prefix: -+ABC, Postfix: AB+C-
-    Line 2: Prefix: -A+BC, Postfix: ABC+-
-    Line 3: Prefix: /A+BC +C*BA  , Postfix: PrefixSyntaxError('Column 11: Too few operators, ...
+    # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    # Prefix-postfix conversion
+    Line 1: Prefix: Peter Rasmussen, Lab 2, Postfix: PrefixSyntaxError('Prefix statement cannot begin with an operand character')
+    ...
+    Line 14: Prefix: +$, Postfix: PrefixSyntaxError('Column 2: Too many operators, 2, for operand characters, 0.')
 
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     Complexity outputs
-    Function: convert_prefix_input	Time (ns): 10375000	Loops: 3
-    Function: convert_prefix_stack	Time (ns): 7775000	Loops: 9
-    Function: _convert_prefix_stack	Time (ns): 7190000	Loops: 8
+    run
+        lines: 15
+        elapsed_ns: 3136000
+        lines_per_ns: 4.783163265306122e-06
+    prefix_processor
+        elapsed_ns: 1904000
+        lines_per_ns: 7.878151260504201e-06
+    prefix_converter
+        elapsed_ns: 233000
+        lines_per_ns: 6.437768240343348e-05
+        n_recursive_calls: 17
+
 
 Header statements make up the first four lines of the output file. Prefix processing outputs are
 listed line by line thereafter. Each line of prefix output begins with the line number of the
-corresponding prefix expression. Then, the original prefix statement is echoed. Finally, The postfix
+corresponding prefix expression. Then, the original prefix statement is echoed. Finally, the postfix
 expression is written. Below the conversion outputs are complexity outputs: time and number of
 loops, a crude proxy for space complexity.
+
+Below the prefix-postfix outputs is a footer which provides a brief complexity summary. This summary
+lists the number of lines, runtime (in nanoseconds), and runtime per line for the three key methods
+used in this program: run (in run.py), PrefixPreprocessor.preprocess_prefix_input (in
+prefix_preprocessor.py), and PrefixConverter.convert_prefix_to_postfix (in prefix_converter.py).
+The prefix_converter method complexity summary also includes the total number of recursive calls
+made. More details on these functions, including their definitions, are provided in each respective
+module.
 
 Prefix statements with syntax errors are not converted into postfix. Instead, an error message
 encapsulated in PrefixSyntaxError object is written to in lieu of a postfix expression.
