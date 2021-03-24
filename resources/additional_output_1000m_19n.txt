@@ -5,7 +5,7 @@
 
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # Prefix-postfix conversion
-Line 1: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 1: Prefix: Peter Rasmussen, Lab 2, Postfix: PrefixSyntaxError('Prefix statement cannot begin with an operand character')
 Line 2: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
 Line 3: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
 Line 4: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
@@ -1005,17 +1005,18 @@ Line 997: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
 Line 998: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
 Line 999: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
 Line 1000: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
+Line 1001: Prefix: +++++++++AAAAAAAAAA, Postfix: AA+A+A+A+A+A+A+A+A+
 
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 Complexity outputs
 run
-	lines: 1001
-	elapsed_ns: 173592000
-	lines_per_ns: 5.766394764735702e-06
+	lines: 1002
+	elapsed_ns: 177115000
+	lines_per_ns: 5.6573412754425094e-06
 prefix_processor
-	elapsed_ns: 115619000
-	lines_per_ns: 8.657746564146031e-06
+	elapsed_ns: 117815000
+	lines_per_ns: 8.504859313330221e-06
 prefix_converter
-	elapsed_ns: 26698000
-	lines_per_ns: 3.749344520188778e-05
+	elapsed_ns: 27477000
+	lines_per_ns: 3.646686319467191e-05
 	n_recursive_calls: 8000
