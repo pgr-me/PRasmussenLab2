@@ -1,4 +1,4 @@
-"""Peter Rasmussen, Lab 2, prefix_preprocessor.py
+"""Peter Rasmussen, Lab 2, symbols.py
 
 This module provides the Symbols class, which bundles operands, operators, and other accepted
 symbols into itself.

@@ -1,4 +1,4 @@
-"""Peter Rasmussen, Lab 2, prefix_preprocessor.py
+"""Peter Rasmussen, Lab 2, prefix_syntax_checker.py
 
 This module provides the PrefixConverter and PrefixSyntaxError classes. The PrefixConverter class
 converts a file of newline-delimited prefix expressions, when possible, into their postfix
