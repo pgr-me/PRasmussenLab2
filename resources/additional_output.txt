@@ -24,12 +24,12 @@ Line 14: Prefix: +$, Postfix: PrefixSyntaxError('Column 2: Too many operators, 2
 Complexity outputs
 run
 	lines: 15
-	elapsed_ns: 3136000
-	lines_per_ns: 4.783163265306122e-06
+	elapsed_ns: 3733000
+	lines_per_ns: 4.018215912135012e-06
 prefix_processor
-	elapsed_ns: 1904000
-	lines_per_ns: 7.878151260504201e-06
+	elapsed_ns: 2263000
+	lines_per_ns: 6.628369421122404e-06
 prefix_converter
-	elapsed_ns: 233000
-	lines_per_ns: 6.437768240343348e-05
+	elapsed_ns: 66000
+	lines_per_ns: 0.00022727272727272727
 	n_recursive_calls: 17
