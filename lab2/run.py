@@ -18,8 +18,13 @@ from lab2.prefix_converter import PrefixConverter
 from lab2.utils import array_to_string, write_footer, write_header
 
 
-def run(in_file: Path, out_file: Path, file_header: str, use_numerals: bool,
-        additional_operators: Union[None, str] = None):
+def run(
+    in_file: Path,
+    out_file: Path,
+    file_header: str,
+    use_numerals: bool,
+    additional_operators: Union[None, str] = None,
+):
     """
     Convert a file of prefix statements to a file of prefix outputs which include complexity stats.
     :param in_file: Input file to read
@@ -31,12 +36,16 @@ def run(in_file: Path, out_file: Path, file_header: str, use_numerals: bool,
     run_start = time_ns()
 
     # Instantiate symbols object, which contains operands, operators, and other accepted characters
-    symbols = Symbols(use_numerals=use_numerals, additional_operators=additional_operators)
+    symbols = Symbols(
+        use_numerals=use_numerals, additional_operators=additional_operators
+    )
 
     # Preprocess prefix file, checking for errors and recording complexity metrics
-    prefix_preprocessor = PrefixPreprocessor(in_file, symbols.operands, symbols.operators)
+    prefix_preprocessor = PrefixPreprocessor(
+        in_file, symbols.operands, symbols.operators
+    )
     file_di: dict = prefix_preprocessor.preprocess_prefix_input()
-    with open(str(out_file), 'w') as f:
+    with open(str(out_file), "w") as f:
 
         # Write header to file
         write_header(f, file_header, in_file, out_file)
@@ -61,15 +70,20 @@ def run(in_file: Path, out_file: Path, file_header: str, use_numerals: bool,
             prefix_converter_elapsed += prefix_converter.elapsed
 
         # compile complexity metrics
-        lines = file_di['lines']
+        lines = file_di["lines"]
         run_elapsed = time_ns() - run_start
         metrics = {
-            'run': dict(lines=lines, elapsed_ns=run_elapsed, lines_per_ns=lines / run_elapsed),
-            'prefix_processor': dict(elapsed_ns=file_di['elapsed'],
-                                     lines_per_ns=lines / file_di['elapsed']),
-            'prefix_converter': dict(elapsed_ns=prefix_converter_elapsed,
-                                     lines_per_ns=lines / prefix_converter_elapsed,
-                                     n_recursive_calls=n_recursive_calls)
+            "run": dict(
+                lines=lines, elapsed_ns=run_elapsed, lines_per_ns=lines / run_elapsed
+            ),
+            "prefix_processor": dict(
+                elapsed_ns=file_di["elapsed"], lines_per_ns=lines / file_di["elapsed"]
+            ),
+            "prefix_converter": dict(
+                elapsed_ns=prefix_converter_elapsed,
+                lines_per_ns=lines / prefix_converter_elapsed,
+                n_recursive_calls=n_recursive_calls,
+            ),
         }
 
         # write footer to file

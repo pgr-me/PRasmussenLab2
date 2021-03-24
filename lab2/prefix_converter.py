@@ -29,7 +29,7 @@ class PrefixConverter:
         """
         self.operand_symbols = operand_symbols
         self.operator_symbols = operator_symbols
-        self.other_symbols = '\n \t'
+        self.other_symbols = "\n \t"
         self.n_recursive_calls = 0
         self.start: Union[None, int] = None
         self.stop: Union[None, int] = None
@@ -41,6 +41,7 @@ class PrefixConverter:
         :param prefix_str: List of prefix symbols
         :return: List of postfix symbols
         """
+
         def __convert_prefix_to_postfix(prefix: list) -> list:
             """
             Convert an array of prefix characters to an array of postfix characters.
@@ -59,6 +60,7 @@ class PrefixConverter:
             op_term = postfix[1] + postfix[2] + postfix[0]
             postfix = [op_term] + postfix[3:]
             return postfix
+
         self.start = time_ns()
         postfix_str = __convert_prefix_to_postfix(prefix_str)
         self.stop = time_ns()

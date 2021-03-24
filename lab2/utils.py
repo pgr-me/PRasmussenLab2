@@ -15,7 +15,7 @@ def array_to_string(a: list) -> str:
     :param a: List of elements
     :return: String of concatenated elements
     """
-    s = ''
+    s = ""
     for i in a:
         s += i
     return s
@@ -27,11 +27,11 @@ def write_footer(file: TextIOWrapper, footer_di: dict):
     :param file: File-like object to write to
     :param footer_di: Dictionary of function names & their performance metrics and associated values
     """
-    footer_str = ''
+    footer_str = ""
     for function_name, metric_di in footer_di.items():
         footer_str += function_name + os.linesep
         for metric, value in metric_di.items():
-            footer_str += f'\t{metric}: {value}' + os.linesep
+            footer_str += f"\t{metric}: {value}" + os.linesep
     file.write(os.linesep + f"# {98 * '@'}" + os.linesep)
     file.write("Complexity outputs" + os.linesep)
     file.write(footer_str)

@@ -77,16 +77,28 @@ arg_parser = argparse.ArgumentParser()
 arg_parser.add_argument("--in_file", "-i", type=Path, help="Input File Pathname")
 arg_parser.add_argument("--out_file", "-o", type=Path, help="Output File Pathname")
 arg_parser.add_argument(
-    "--file_header", "-f", default="Peter Rasmussen, Lab 2", type=str,
+    "--file_header",
+    "-f",
+    default="Peter Rasmussen, Lab 2",
+    type=str,
     help="Include numerals as operands",
 )
 arg_parser.add_argument(
     "--use_numerals", "-n", default=False, type=bool, help="Include numerals operands"
 )
 arg_parser.add_argument(
-    "--additional_operators", "-a", default=None, help="Use additional operators",
+    "--additional_operators",
+    "-a",
+    default=None,
+    help="Use additional operators",
 )
 args = arg_parser.parse_args()
 
 # Execute prefix-to-postfix conversion run function
-run(args.in_file, args.out_file, args.file_header, args.use_numerals, args.additional_operators)
+run(
+    args.in_file,
+    args.out_file,
+    args.file_header,
+    args.use_numerals,
+    args.additional_operators,
+)

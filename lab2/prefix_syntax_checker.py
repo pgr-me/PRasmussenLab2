@@ -33,7 +33,7 @@ class PrefixSyntaxChecker:
         """
         self.operand_symbols = operand_symbols
         self.operator_symbols = operator_symbols
-        self.other_symbols = '\n \t'
+        self.other_symbols = "\n \t"
         self.accepted_symbols = (
             self.operand_symbols + self.operator_symbols + self.other_symbols
         )
