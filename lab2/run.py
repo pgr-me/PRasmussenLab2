@@ -1,13 +1,7 @@
 """Peter Rasmussen, Lab 2, run.py
 
-This module recursively converts a file of newline-delimited prefix expressions into an output of
-postfix expressions. Each line of the output begins with the line number of the prefix expression
-from the input file, followed by the echoed prefix expression and its postfix equivalent. Postfix
-expressions are not rendered for invalid prefix expressions (i.e., those that have syntax errors).
-In these cases, the prefix syntax error is written instead of a postfix expression. Below the
-prefix-postfix outputs is a brief complexity summary, which lists the cumulative runtime and number
-of loops for the three key functions used in this program. More details on these functions,
-including their definition, are provided in the prefix_converter.py module.
+This module preprocesses an input file of prefix statements, checking each prefix statement for
+errors, and then recursively each prefix statement, where possible, into its postfix equivalent.
 
 """
 

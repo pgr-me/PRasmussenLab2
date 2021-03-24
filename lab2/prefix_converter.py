@@ -1,32 +1,8 @@
 """Peter Rasmussen, Lab 2, prefix_converter.py
 
-This module provides the PrefixConverter and PrefixSyntaxError classes. The PrefixConverter class
-converts a file of newline-delimited prefix expressions, when possible, into their postfix
-equivalents.
-
-Example output file:
-    # Peter Rasmussen, Lab 1
-    # Input file: /path/to/required_input.txt
-    # Output file: /path/required_output.txt
-
-    Line 1: Prefix: -+ABC, Postfix: AB+C-
-    Line 2: Prefix: -A+BC, Postfix: ABC+-
-    Line 3: Prefix: /A+BC +C*BA  , Postfix: PrefixSyntaxError('Column 11: Too few operators, ...
-
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    Complexity outputs
-    Function: convert_prefix_input	Time (ns): 10375000	Loops: 3
-    Function: convert_prefix_stack	Time (ns): 7775000	Loops: 9
-    Function: _convert_prefix_stack	Time (ns): 7190000	Loops: 8
-
-Header statements make up the first four lines of the output file. Prefix processing outputs are
-listed line by line thereafter. Each line of prefix output begins with the line number of the
-corresponding prefix expression. Then, the original prefix statement is echoed. Finally, the postfix
-expression is written. Below the conversion outputs are complexity outputs: time and number of
-loops, a crude proxy for space complexity.
-
-Prefix statements with syntax errors are not converted into postfix. Instead, an error
-message encapsulated in PrefixSyntaxError object is written to in lieu of a postfix expression.
+This module recursively converts a prefix expression into its postfix equivalent. Since prefix
+syntax errors are handled upstream in prefix_preprocessor.py, this script assumes inputs are error-
+free.
 
 """
 

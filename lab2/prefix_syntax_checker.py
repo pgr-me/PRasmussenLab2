@@ -1,32 +1,12 @@
 """Peter Rasmussen, Lab 2, prefix_syntax_checker.py
 
-This module provides the PrefixConverter and PrefixSyntaxError classes. The PrefixConverter class
-converts a file of newline-delimited prefix expressions, when possible, into their postfix
-equivalents.
+This module provides the PrefixSyntaxError and PrefixSyntaxChecker classes. The PrefixSyntaxChecker
+class catches the first error encountered in a prefix string, ignoring subsequent errors for the
+sake of simplicity. This class is used by the prefix_preprocessor module.
 
-Example output file:
-    # Peter Rasmussen, Lab 2
-    # Input file: /path/to/required_input.txt
-    # Output file: /path/required_output.txt
-
-    Line 1: Prefix: -+ABC, Postfix: AB+C-
-    Line 2: Prefix: -A+BC, Postfix: ABC+-
-    Line 3: Prefix: /A+BC +C*BA  , Postfix: PrefixSyntaxError('Column 11: Too few operators, ...
-
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    Complexity outputs
-    Function: convert_prefix_input	Time (ns): 10375000	Loops: 3
-    Function: convert_prefix_stack	Time (ns): 7775000	Loops: 9
-    Function: _convert_prefix_stack	Time (ns): 7190000	Loops: 8
-
-Header statements make up the first four lines of the output file. Prefix processing outputs are
-listed line by line thereafter. Each line of prefix output begins with the line number of the
-corresponding prefix expression. Then, the original prefix statement is echoed. Finally, the postfix
-expression is written. Below the conversion outputs are complexity outputs: time and number of
-loops, a crude proxy for space complexity.
-
-Prefix statements with syntax errors are not converted into postfix. Instead, an error
-message encapsulated in PrefixSyntaxError object is written to in lieu of a postfix expression.
+Prefix statements with syntax errors are not converted into postfix. Instead, an error message
+encapsulated in PrefixSyntaxError object is written in lieu of the would-have-been postfix
+expression.
 
 """
 
@@ -46,6 +26,11 @@ class PrefixSyntaxChecker:
     """
 
     def __init__(self, operand_symbols, operator_symbols):
+        """
+        Initialize operands and operators.
+        :param operand_symbols: Set of prefix operand symbols
+        :param operator_symbols: Set of prefix operator symbols
+        """
         self.operand_symbols = operand_symbols
         self.operator_symbols = operator_symbols
         self.other_symbols = '\n \t'

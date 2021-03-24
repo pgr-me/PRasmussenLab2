@@ -1,9 +1,10 @@
 """Peter Rasmussen, Lab 2, prefix_preprocessor.py
 
 This module provides the PrefixPreProcessor class, which reads a file of prefix statements character
-by character and checks each prefix statement for errors. PrefixPreProcessor returns a list of
-dictionaries. Each dictionary corresponds to one line in the input file and contains prefix
-statements, errors (if any), and complexity metrics.
+by character and checks each prefix statement for errors. PrefixPreProcessor.preprocess_prefix_input
+returns a list of dictionaries. Each dictionary corresponds to one line in the input file and
+contains prefix statements, errors (if any), and complexity metrics. This module uses the
+prefix_syntax_checker module to catch prefix syntax errors.
 
 """
 
@@ -29,10 +30,10 @@ class PrefixPreprocessor:
             operators: str
     ):
         """
-        Initialize IO attributes and output file header and define symbol set
+        Initialize input file, operands, and operators.
         :param input_file: Input file to read
-        :param use_numerals: True to include numerals among accepted_symbols
-        :param additional_operators: True to include additional operators
+        :param operands: Set of prefix operand symbols
+        :param operators: Set of prefix operator symbols
         """
         self.input_file = Path(input_file)
         self.operands = operands
@@ -52,7 +53,7 @@ class PrefixPreprocessor:
         with open(self.input_file, "r") as f:
 
             # While loop adapted from https://www.geeksforgeeks.org/python-program-to-read-character-by-character-from-a-file/
-            # Specifically, lines 119 through 122
+            # Specifically, lines 61 through 63
             # The while loop iterates at the character level
             # Initialize symbol and line dict
             line_di = self.make_line_di(line)
